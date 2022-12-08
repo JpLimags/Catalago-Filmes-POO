@@ -4,6 +4,7 @@ import Button from "../../components/button"
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import logo from "./assets/Logo.png"
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -36,35 +37,43 @@ const Signup = () => {
 
   return (
     <C.Container>
-      <C.Label>SISTEMA DE LOGIN</C.Label>
+      <C.Left>
+        <h1 style={{color: "white", fontSize: '50px'}}>Cadastre-se na nossa plataforma</h1>
+        <img src={logo} alt="Logo do site"></img>
+      </C.Left>
+      <C.Right>
       <C.Content>
-        <Input
-          type="email"
-          placeholder="Digite seu E-mail"
-          value={email}
-          onChange={(e) => [setEmail(e.target.value), setError("")]}
-        />
-        <Input
-          type="email"
-          placeholder="Confirme seu E-mail"
-          value={emailConf}
-          onChange={(e) => [setEmailConf(e.target.value), setError("")]}
-        />
-        <Input
-          type="password"
-          placeholder="Digite sua Senha"
-          value={senha}
-          onChange={(e) => [setSenha(e.target.value), setError("")]}
-        />
-        <C.labelError>{error}</C.labelError>
-        <Button Text="Inscrever-se" onClick={handleSignup} />
-        <C.LabelSignin>
-          Já tem uma conta?
-          <C.Strong>
-            <Link to="/">&nbsp;Entre</Link>
-          </C.Strong>
-        </C.LabelSignin>
+        <C.Label>Crie sua conta</C.Label>
+        <C.Form>
+          <Input
+            type="email"
+            placeholder="Digite seu E-mail"
+            value={email}
+            onChange={(e) => [setEmail(e.target.value), setError("")]}
+          />
+          <Input
+            type="email"
+            placeholder="Confirme seu E-mail"
+            value={emailConf}
+            onChange={(e) => [setEmailConf(e.target.value), setError("")]}
+          />
+          <Input
+            type="password"
+            placeholder="Digite sua Senha"
+            value={senha}
+            onChange={(e) => [setSenha(e.target.value), setError("")]}
+          />
+          <C.labelError>{error}</C.labelError>
+          <Button Text="Inscrever-se" onClick={handleSignup} />
+          <C.LabelSignin>
+            Já tem uma conta?
+            <C.Strong>
+              <Link to="/">&nbsp;Entre</Link>
+            </C.Strong>
+          </C.LabelSignin>
+        </C.Form>
       </C.Content>
+      </C.Right>
     </C.Container>
   );
 };
