@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Signin from '../pages/Signin'
 import Signup from '../pages/Signup'
 import useAuth from '../hooks/useAuth'
+import Navbar from '../components/navbar'
 
 
 const Private = ({ Item }) => {
@@ -15,7 +16,9 @@ const Private = ({ Item }) => {
 const RoutesApp = () => {
   return (
     <BrowserRouter>
+       
         <Fragment>
+            <Navbar/>
             <Routes>
             <Route exact path="/home" element={<Private Item={Home} />} />
             <Route path="/" element={<Signin />} />

@@ -11,13 +11,13 @@ export const Container = styled.div`
   background-color: black;
 `
 export const Left = styled.div`
-  width: 50vh;
+  width: 48vh;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  gap: 4rem;
+  gap: 2rem;
 `
 
 export const Right = styled.div``
@@ -29,6 +29,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+  height: 55vh;
   box-shadow: 0 1px 2px #0003;
   background-color: #28282C;
   max-width: 350px;
@@ -56,7 +57,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 48vw;
   box-shadow: 0 1px 2px #0003;
   background-color: #28282C;
   max-width: 350px;
