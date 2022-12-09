@@ -23,11 +23,11 @@ export const Left = styled.div`
 export const Right = styled.div``
 
 export const Form = styled.form`
-  gap: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 1rem;
   width: 100%;
   box-shadow: 0 1px 2px #0003;
   background-color: #28282C;

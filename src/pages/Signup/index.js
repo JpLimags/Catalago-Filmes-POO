@@ -7,6 +7,7 @@ import useAuth from "../../hooks/useAuth";
 import logo from "./assets/Logo.png"
 
 const Signup = () => {
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("");
   const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");
@@ -16,7 +17,7 @@ const Signup = () => {
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!email | !emailConf | !senha) {
+    if (!email | !emailConf | !senha | !name) {
       setError("Preencha todos os campos");
       return;
     } else if (email !== emailConf) {
@@ -56,6 +57,12 @@ const Signup = () => {
             placeholder="Confirme seu E-mail"
             value={emailConf}
             onChange={(e) => [setEmailConf(e.target.value), setError("")]}
+          />
+          <Input
+            type="text"
+            placeholder="Nome de usuário"
+            value={name}
+            onChange={(e) => [setName(e.target.value), setError("")]}
           />
           <Input
             type="password"
