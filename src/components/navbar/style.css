@@ -45,15 +45,6 @@
     padding: .25rem;
   }
   
-  
-  .nav li:hover {
-    background-color: #777;
-    width: 102%;
-    height: 102%;
-    transition: transform .2s; 
-    transform: scale(1.5);
-  }
-
   .nav   form {
     display: flex;
     gap: 0.5rem;
@@ -61,8 +52,10 @@
 
   .nav input {
     padding: 0.4rem 0.8rem;
+    width: 700px;
     border-radius: 4px;
     border: none;
+    flex-direction: flex-start;
   }
 
   .nav form button {
@@ -76,3 +69,68 @@
     align-items: center;
     cursor: pointer;
   }
+  
+
+@media(max-width: 999px){
+
+    .flex-container{
+
+        flex-direction: column;
+    }
+
+    
+    .nav{
+
+      width: 100%;
+    }
+
+    .nav input {
+      padding: 0.4rem 0.8rem;
+      width: 150px;
+      border-radius: 4px;
+      border: none;
+      flex-direction: flex-start;
+    }
+    /*
+
+    .apresentação .text-apresentation{
+
+        width: 100%;
+    }
+
+    #quem-somos{
+
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos{
+
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-services{
+
+        flex-direction: column;
+    }
+
+    .item-service img{
+
+        width: 50%;
+        margin: auto;
+    }
+
+    .list-plans{
+
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .list-plans .plans-items{
+
+        max-width: 90%;
+        margin: auto;width: 100%;
+        margin-bottom: 20px;
+    }*/
+}
