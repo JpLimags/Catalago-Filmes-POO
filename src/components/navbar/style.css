@@ -12,7 +12,7 @@
   }
   
   .nav {
-    position: fixed;
+    position: absolute;
     background-color: #A87FF3;
     color: white;
     display: flex;
@@ -52,4 +52,27 @@
     height: 102%;
     transition: transform .2s; 
     transform: scale(1.5);
+  }
+
+  .nav   form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .nav input {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .nav form button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: #A87FF3;
+    padding: 0.3rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
