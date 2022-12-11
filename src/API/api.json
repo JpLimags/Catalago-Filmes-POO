@@ -1,0 +1,23 @@
+
+    {
+      "id": 1,
+      "name": "Computador do mal",
+      "genre": "Terror",
+      "image": "string",
+      "synopsis": "Um tomatate de uma cidade pacífica se revolta pela desperdício de tomates na cidades, então pelo poder e vontade de vingaçã dos tomates ele decide se vingar dos humaanos",
+      "releaseDateOf": "2022-12-11T01:05:42.932",
+      "professionalAssignments": [
+        {
+          "id": 1,
+          "professional": "Carlos",
+          "function": "ATOR"
+        }
+      ],
+      "genreLanguages": [
+        {
+          "id": 1,
+          "language": "Portugues",
+          "genre": "Terror"
+        }
+      ]
+    }
