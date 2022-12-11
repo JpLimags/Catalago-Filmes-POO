@@ -1,5 +1,5 @@
 
-import { Link, useMatch, useResolvedPath, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { BiSearchAlt2 } from "react-icons/bi";
 import { useState } from "react";
 import "./style.css"
@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <Link to="/Home" className="site-title">
-        Filmesbr
+        MovieDB
       </Link>
       <form onSubmit={handleSubmit}>
         <input
@@ -33,22 +33,6 @@ export default function Navbar() {
             <BiSearchAlt2 />
         </button>
       </form>
-      <ul>
-        <CustomLink to="/Signin">Fazer Login </CustomLink>
-      </ul>
     </nav>
-  )
-}
-
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
   )
 }
